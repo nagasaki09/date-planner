@@ -60,7 +60,7 @@
     </div>
   </div>
   <!-- Parallax section -->
-  <div class="py-5 section-parallax d-flex" id="restaurant" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
+  <div class="py-3 section-parallax d-flex border-bottom border-dark" id="restaurant" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="">
@@ -69,7 +69,7 @@
       </div>
     </div>
   </div>
-  <div class="py-1 section-parallax d-flex" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
+  <div class="py-4 section-parallax d-flex" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="">
@@ -221,7 +221,7 @@
 
 
 
-  <div class="py-5 section-parallax d-flex "  style="" id="kankou" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
+  <div class="py-3 section-parallax d-flex border-bottom border-dark"  id="kankou" style="background-image: url();">
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="">
@@ -230,7 +230,7 @@
       </div>
     </div>
   </div>
-  <div class="py-1 section-parallax d-flex" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
+  <div class="py-4 section-parallax d-flex" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="">
@@ -335,10 +335,13 @@
   </div>
   </div>
   <!-- Schedule -->
-  <div class="py-5 section-parallax" id="plan"　style="background-image: url(&quot;assets/conference/schedule.jpg&quot;);" id="schedule" >
+  <div class="py-3 section-parallax" id="plan"　style="background-image: url(&quot;assets/conference/schedule.jpg&quot;);" id="schedule" >
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 border-bottom border-dark">
         <h2 class="">プランを提案</h2>
+      </div>
+      <div class="col-md-12 ">
+        <h2 class=""></h2>
       </div>
     </div>
     <div class="container section-aquamarine">
@@ -400,19 +403,7 @@
     </div>
   </div>
   <!-- Call to action -->
-  <div class="py-5 section-aquamarine" id="register">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 text-md-left text-center">
-          <h1 class="text-white">Registrations are open</h1>
-          <p>Pre-register to get a priority access to the event. Fares will be published later on.&nbsp; <br>Get the maximum from the lectures together with the possibility of joining exclusive side-events.</p>
-        </div>
-        <div class="col-md-4 align-self-center animate-in-right">
-          <a href="#" class="btn btn-lg btn-light my-3">Register now</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <
   <!-- Footer -->
   <footer class="text-md-left text-center p-4 bg-dark text-light">
     <div class="container">
