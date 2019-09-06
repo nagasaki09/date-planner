@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbar2SupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#">トップページ</a>
+            <a class="nav-link" href="/">トップページ</a>
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link" href="#restaurant">飲食店を検索</a>
@@ -78,24 +78,36 @@
       </div>
     </div>
   </div>
-  <div class="py-4 section-parallax d-flex" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
-    <div class="container">
+  <div class="py-4 section-parallax d-flex" style="padding-left: 50px;">
+    <form class="py-1 section-parallax d-flex" method="POST" action="{{url('foodlist')}}">
+      {{ csrf_field() }}
+    <div class="container" >
       <div class="row">
-        <div class="col-md-6" style=""><img class="img-fluid d-block rounded-circle" src="/jpg/image1.jpeg" style="	width: 300px;	height: 300px;"></div>
-        <div class="col-md-6"><img class="img-fluid d-block rounded-circle" src="/jpg/image2.jpg" style="	width: 300px;	height: 300px;"></div>
+        <div class="col-md-6" style=""><input type="radio" id="1" value="1" name="food" ><label for="1">
+    <img src="/jpg/image1.jpeg" style="height:300px; width:300px; border-radius: 50%;">
+  </label></div>
+        <div class="col-md-6"><input type="radio" id="2" value="2" name="food" ><label for="2">
+    <img src="/jpg/image2.jpg" style="height:300px; width:300px; border-radius: 50%;">
+  </label></div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-6" style=""><img class="img-fluid d-block rounded-circle" src="/jpg/image3.jpg" style="	width: 300px;	height: 300px;"></div>
-        <div class="col-md-6"><img class="img-fluid d-block rounded-circle" src="/jpg/image4.jpg" style="	width: 300px;	height: 300px;"></div>
+        <div class="col-md-6" style=""><input type="radio" id="3" value="3" name="food" ><label for="3">
+    <img src="/jpg/image3.jpg" style="height:300px; width:300px; border-radius: 50%;">
+  </label></div>
+        <div class="col-md-6"><input type="radio" id="4" value="4" name="food" ><label for="4">
+    <img src="/jpg/image4.jpg" style="height:300px; width:300px; border-radius: 50%;">
+  </label></div>
       </div>
     </div>
   </div>
+
   <div class="py-4 border-bottom border-dark" >
     <div class="container">
       <div class="row">
-        <div class="col-md-12"><select name="pref" style="font-size:20px; border:1px;">
+        <div class="col-md-12"><select name="pre" id="pre" style="font-size:20px; border:1px;">
+
 <option value="">選択してください</option>
 <option value="北海道">北海道</option>
 <option value="青森県">青森県</option>
@@ -215,8 +227,8 @@
         <div class="col-md-4"><a href="/foodlist"><button class=" btn btn-primary" type="submit" href="/foodlist">この条件で検索</button></a></div>
       </div>
     </div>
+    </form>
   </div>
-
 
 
 
@@ -242,14 +254,22 @@
   <div class="py-4 section-parallax d-flex" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
     <div class="container">
       <div class="row">
-        <div class="col-md-6" style=""><img class="img-fluid d-block rounded-circle" src="/jpg/image5.jpeg" style="	width: 300px;	height: 300px;"></div>
-        <div class="col-md-6"><img class="img-fluid d-block rounded-circle" src="/jpg/image6.jpg" style="	width: 300px;	height: 300px;"></div>
+        <div class="col-md-6" style=""><input type="radio" id="b1" value="b1" name="kankou" ><label for="b1">
+    <img src="/jpg/image5.jpeg" style="height:300px; width:300px; border-radius: 50%;">
+  </label></div>
+        <div class="col-md-6"><input type="radio" id="b2" value="b2" name="kankou" ><label for="b2">
+    <img src="/jpg/image6.jpg" style="height:300px; width:300px; border-radius: 50%;">
+  </label></div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-6" style=""><img class="img-fluid d-block rounded-circle" src="/jpg/image7.jpeg" style="	width: 300px;	height: 300px;"></div>
-        <div class="col-md-6"><img class="img-fluid d-block rounded-circle" src="/jpg/image8.jpg" style="	width: 300px;	height: 300px;"></div>
+        <div class="col-md-6" style=""><input type="radio" id="b3" value="b3" name="kankou" ><label for="b3">
+    <img src="/jpg/image7.jpeg" style="height:300px; width:300px; border-radius: 50%;">
+  </label></div>
+        <div class="col-md-6"><input type="radio" id="b4" value="b4" name="kankou" ><label for="b4">
+    <img src="/jpg/image8.jpg" style="height:300px; width:300px; border-radius: 50%;">
+  </label></div>
       </div>
     </div>
   </div>
@@ -335,7 +355,7 @@
   </div>
   </div>
   <!-- Schedule -->
-  <div class="py-3 section-parallax" id="plan"　style="background-image: url(&quot;assets/conference/schedule.jpg&quot;);" id="schedule" >
+  <div class="py-4 section-parallax" id="plan"　style="background-image: url(&quot;assets/conference/schedule.jpg&quot;);" id="schedule" >
     <div class="row">
       <div class="col-md-12 border-bottom border-dark">
         <h2 class="">プランを提案</h2>
@@ -402,8 +422,9 @@
       </div>
     </div>
   </div>
+
   <!-- Call to action -->
-  <
+
   <!-- Footer -->
   <footer class="text-md-left text-center p-4 bg-dark text-light">
     <div class="container">
@@ -422,7 +443,7 @@
     flatpickr.localize(flatpickr.l10ns.ja);
     flatpickr('#calendarTEST');
 </script>
-  
+
 </body>
 
 </html>

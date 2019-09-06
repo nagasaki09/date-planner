@@ -47,50 +47,62 @@
     </div>
   </nav>
   <!-- Cover -->
-
-
-  <nav class="navbar navbar-expand-lg navbar-light py-5"　 >
-      <div class="container"> <a class="navbar-brand text-primary" href="#">
-          <i class="fa d-inline fa-lg fa-circle-o"></i>
-          <b> 1-50件を表示 (2525件中)</b>
-        </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar5">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar5">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"> <a class="nav-link" href="#">おすすめ順</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">評価順</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">関連順</a> </li>
-          </ul> <a class="btn btn-outline-primary navbar-btn ml-md-2">マッチング順</a>
+  <div class="py-5 section-parallax d-flex" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="">
         </div>
       </div>
-    </nav>
-
-@foreach($data as $data1)
-  <div class="pt-5 border-bottom border-top border-dark" >
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mr-auto order-2 order-md-1"> <img class="img-fluid d-block" src="/jpg/food_{{$data1->id}}.jpg" style="	transform:  translateX(30px)  translateY(-10px) ;"> </div>
-          <div class="px-md-5 p-3 d-flex flex-column align-items-start justify-content-center col-md-7 order-1 order-md-2">
-            <h1><a href="detail/{{$data1->id}}">{{$data1->name}}</a></h1>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex"><i class="fa fa-bookmark text-primary mr-2"></i>お問い合わせ：{{$data1->tel}}</li>
-              <li class="list-group-item d-flex"><i class="fa fa-bell text-primary mr-2"></i>住所：{{$data1->prefecture}}</li>
-              <li class="list-group-item d-flex"><i class="fa fa-life-ring text-primary mr-2"></i>価格：{{$data1->price}}</li>
-              <li class="list-group-item d-flex"><i class="fa fa-paper-plane text-primary mr-2"></i>営業時間：{{$data1->time}}</li>
-            </ul>
-            <div class="row text-muted">
-              <div class="col-12 p-2"> <i class="d-inline fa fa-bed fa-2x"></i> <i class="d-inline fa fa-bolt fa-2x mx-4"></i> <i class="d-inline fa fa-ban fa-2x"></i> </div>
+    </div>
+  </div>
+  <div class="py-2 section-parallax d-flex" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="">
+          <h3 class="border-bottom" contenteditable="true">@foreach($data as $data1){{$data1->name}}@endforeach</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center text-white" style="position: relative; overflow: hidden;" > <video autoplay="" loop="" muted="" plays-inline="" style="position: absolute; right: 0; top: 0; min-width:100%; z-index: -100;">
+      <source src="http://www9.nhk.or.jp/das/movie/D0002060/D0002060188_00000_V_000.mp4" type="video/mp4"> </video>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h3 class="mb-4 display-3"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-4 " >
+    <div class="row">
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+  <div class="py-1 border-bottom border-dark" >
+    <div class="row">
+      <div class="col-md-6">
+        <h5 class="d-flex"><i class="fa fa-map-signs"></i>&nbsp;&nbsp;&nbsp;&nbsp;東京駅から徒歩3分&nbsp;&nbsp; &nbsp; <i class="fa fa-apple"></i>&nbsp;&nbsp;寿司&nbsp; &nbsp; &nbsp;<i class="fa fa-money"></i> &nbsp;&nbsp;2000円~<br></h5>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header" contenteditable="true">洗練された技のLIVE感とこだわりのお塩で味わう黒毛和牛を</div>
+            <div class="card-body">
+              <p>おかげさまで、レストランアワード鉄板焼き部門　2年連続1位を獲得致しました。 銀座の中心で、厳選の神戸牛や伊勢海老、鮑などの高級食材をこだわりの空間でご堪能ください </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-@endforeach
-
-
-  <!-- Schedule -->
-  <div class="py-5 section-parallax d-flex border-bottom border-dark" id="restaurant" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
+  </div>
+  <!-- Parallax section -->
+  <div class="py-3 section-parallax d-flex border-bottom border-dark" id="restaurant" style="background-image: url(&quot;assets/conference/venue.jpg&quot;);">
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="">
@@ -111,7 +123,7 @@
   <div class="py-4 section-parallax d-flex" style="padding-left: 50px;">
     <form class="py-1 section-parallax d-flex" method="POST" action="{{url('foodlist')}}">
       {{ csrf_field() }}
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="col-md-6" style=""><input type="radio" id="1" value="1" name="food" ><label for="1">
     <img src="/jpg/image1.jpeg" style="height:300px; width:300px; border-radius: 50%;">
@@ -138,57 +150,57 @@
       <div class="row">
         <div class="col-md-12"><select name="pre" id="pre" style="font-size:20px; border:1px;">
 
-  <option value="">選択してください</option>
-  <option value="北海道">北海道</option>
-  <option value="青森県">青森県</option>
-  <option value="岩手県">岩手県</option>
-  <option value="宮城県">宮城県</option>
-  <option value="秋田県">秋田県</option>
-  <option value="山形県">山形県</option>
-  <option value="福島県">福島県</option>
-  <option value="茨城県">茨城県</option>
-  <option value="栃木県">栃木県</option>
-  <option value="群馬県">群馬県</option>
-  <option value="埼玉県">埼玉県</option>
-  <option value="千葉県">千葉県</option>
-  <option value="東京都" selected>東京都</option>
-  <option value="神奈川県">神奈川県</option>
-  <option value="新潟県">新潟県</option>
-  <option value="富山県">富山県</option>
-  <option value="石川県">石川県</option>
-  <option value="福井県">福井県</option>
-  <option value="山梨県">山梨県</option>
-  <option value="長野県">長野県</option>
-  <option value="岐阜県">岐阜県</option>
-  <option value="静岡県">静岡県</option>
-  <option value="愛知県">愛知県</option>
-  <option value="三重県">三重県</option>
-  <option value="滋賀県">滋賀県</option>
-  <option value="京都府">京都府</option>
-  <option value="大阪府">大阪府</option>
-  <option value="兵庫県">兵庫県</option>
-  <option value="奈良県">奈良県</option>
-  <option value="和歌山県">和歌山県</option>
-  <option value="鳥取県">鳥取県</option>
-  <option value="島根県">島根県</option>
-  <option value="岡山県">岡山県</option>
-  <option value="広島県">広島県</option>
-  <option value="山口県">山口県</option>
-  <option value="徳島県">徳島県</option>
-  <option value="香川県">香川県</option>
-  <option value="愛媛県">愛媛県</option>
-  <option value="高知県">高知県</option>
-  <option value="福岡県">福岡県</option>
-  <option value="佐賀県">佐賀県</option>
-  <option value="長崎県">長崎県</option>
-  <option value="熊本県">熊本県</option>
-  <option value="大分県">大分県</option>
-  <option value="宮崎県">宮崎県</option>
-  <option value="鹿児島県">鹿児島県</option>
-  <option value="沖縄県">沖縄県</option>
-  </select>
-  <input type="text" style="font-size: 150%;" id="calendarTEST" placeholder="日付選択">
-  <select name="selectedate-h" id="selectedate-h" style="font-size:20px; border:1px;">
+<option value="">選択してください</option>
+<option value="北海道">北海道</option>
+<option value="青森県">青森県</option>
+<option value="岩手県">岩手県</option>
+<option value="宮城県">宮城県</option>
+<option value="秋田県">秋田県</option>
+<option value="山形県">山形県</option>
+<option value="福島県">福島県</option>
+<option value="茨城県">茨城県</option>
+<option value="栃木県">栃木県</option>
+<option value="群馬県">群馬県</option>
+<option value="埼玉県">埼玉県</option>
+<option value="千葉県">千葉県</option>
+<option value="東京都" selected>東京都</option>
+<option value="神奈川県">神奈川県</option>
+<option value="新潟県">新潟県</option>
+<option value="富山県">富山県</option>
+<option value="石川県">石川県</option>
+<option value="福井県">福井県</option>
+<option value="山梨県">山梨県</option>
+<option value="長野県">長野県</option>
+<option value="岐阜県">岐阜県</option>
+<option value="静岡県">静岡県</option>
+<option value="愛知県">愛知県</option>
+<option value="三重県">三重県</option>
+<option value="滋賀県">滋賀県</option>
+<option value="京都府">京都府</option>
+<option value="大阪府">大阪府</option>
+<option value="兵庫県">兵庫県</option>
+<option value="奈良県">奈良県</option>
+<option value="和歌山県">和歌山県</option>
+<option value="鳥取県">鳥取県</option>
+<option value="島根県">島根県</option>
+<option value="岡山県">岡山県</option>
+<option value="広島県">広島県</option>
+<option value="山口県">山口県</option>
+<option value="徳島県">徳島県</option>
+<option value="香川県">香川県</option>
+<option value="愛媛県">愛媛県</option>
+<option value="高知県">高知県</option>
+<option value="福岡県">福岡県</option>
+<option value="佐賀県">佐賀県</option>
+<option value="長崎県">長崎県</option>
+<option value="熊本県">熊本県</option>
+<option value="大分県">大分県</option>
+<option value="宮崎県">宮崎県</option>
+<option value="鹿児島県">鹿児島県</option>
+<option value="沖縄県">沖縄県</option>
+</select>
+<input type="text" style="font-size: 150%;" id="calendarTEST" placeholder="日付選択">
+<select name="selectedate-h" id="selectedate-h" style="font-size:20px; border:1px;">
   <option value="00">00</option>
   <option value="01">01</option>
   <option value="02">02</option>
@@ -213,8 +225,8 @@
   <option value="21">21</option>
   <option value="22">22</option>
   <option value="23">23</option>
-  </select><a>時</a>
-  <select name="selectedate-m" id="selectedate-m" style="font-size:20px; border:1px;">
+</select><a>時</a>
+<select name="selectedate-m" id="selectedate-m" style="font-size:20px; border:1px;">
   <option value="00">00</option>
   <option value="05">05</option>
   <option value="10">10</option>
@@ -228,25 +240,25 @@
   <option value="50">50</option>
   <option value="55">55</option>
 
-  </select>
-  <a>分</a></div>
+</select>
+<a>分</a></div>
 
       </div>
       <div class="row">
         <div class="col-md-12"><div class="cp_ipcheck">
-  <input type="checkbox" id="b_ch1" />
-  <label for="b_ch1">個室</label>
-  <input type="checkbox" id="b_ch2" />
-  <label for="b_ch2">禁煙</label>
-  <input type="checkbox" id="b_ch3" />
-  <label for="b_ch3">カード利用</label>
+	<input type="checkbox" id="b_ch1" />
+	<label for="b_ch1">個室</label>
+	<input type="checkbox" id="b_ch2" />
+	<label for="b_ch2">禁煙</label>
+	<input type="checkbox" id="b_ch3" />
+	<label for="b_ch3">カード利用</label>
   <input type="checkbox" id="b_ch４" />
-  <label for="b_ch４">誕生日特典</label>
+	<label for="b_ch４">誕生日特典</label>
   <input type="checkbox" id="b_ch５" />
-  <label for="b_ch５">飲み放題</label>
+	<label for="b_ch５">飲み放題</label>
   <input type="checkbox" id="b_ch６" />
-  <label for="b_ch６">雰囲気</label>
-  </div></div>
+	<label for="b_ch６">雰囲気</label>
+</div></div>
       </div>
       <div class="row">
         <div class="col-md-4"></div>
@@ -260,6 +272,9 @@
     </form>
   </div>
 
+
+
+  <!-- Call to action -->
 
   <!-- Footer -->
   <footer class="text-md-left text-center p-4 bg-dark text-light">
@@ -279,6 +294,7 @@
     flatpickr.localize(flatpickr.l10ns.ja);
     flatpickr('#calendarTEST');
 </script>
+
 </body>
 
 </html>

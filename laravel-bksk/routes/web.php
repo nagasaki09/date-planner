@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/foodlist', function () {
-    return view('foodlist');
-});
+
+
+Route::post('/foodlist', 'FoodController@index');
+
+Route::get('/detail/{id?}', 'FoodDetailController@index');

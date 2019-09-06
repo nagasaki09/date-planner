@@ -45,3 +45,28 @@
 	-webkit-transition: 0.25s all ease;
 	        transition: 0.25s all ease;
 }
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked + label img {
+  background: orange;
+}
+
+label img {
+  margin: 3px;
+  padding: 8px;
+}
+
+
+
+input[type="checkbox8"]{
+    -webkit-appearance: none;  //元々のチェックボックスを非表示
+    position: relative;　　　　//checked時画像のためのrelative
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: url(./img/checkbox.png);  //未チェック時の画像
+    background-size: contain;
+}
